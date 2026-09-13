@@ -1,0 +1,332 @@
+/* Polina Timini veebilehe kujundus */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #d9d9d9;
+    color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Päis */
+
+header {
+    padding: 55px 20px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #111111, #741c36);
+    border-bottom: 5px solid #741c36;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #dddddd;
+    font-size: 18px;
+}
+
+/* Navigeerimismenüü */
+
+nav {
+    background-color: #111111;
+    border-bottom: 3px solid #741c36;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 17px 22px;
+    color: white;
+    text-decoration: none;
+    border-left: 1px solid #444444;
+    transition: 0.3s;
+}
+
+nav li:last-child a {
+    border-right: 1px solid #444444;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #741c36;
+}
+
+/* Põhisisu */
+
+main {
+    width: 92%;
+    max-width: 1250px;
+    min-height: 450px;
+    margin: 30px auto;
+}
+
+main > h2 {
+    padding: 12px;
+    color: white;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    background-color: #741c36;
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #b8b8b8;
+    border-left: 7px solid #741c36;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 18%);
+}
+
+section h2 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    color: #741c36;
+    font-family: Georgia, "Times New Roman", serif;
+    border-bottom: 2px solid #cccccc;
+}
+
+/* Avaleht */
+
+#tutvustus {
+    background-color: #ffffff;
+    border-left-color: #741c36;
+}
+
+#huvid {
+    background-color: #eeeeee;
+    border-left-color: #111111;
+}
+
+#avalehepilt,
+#erapilt {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto 0;
+    padding: 0;
+    border: 5px solid #741c36;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+}
+
+/* Kontakt */
+
+#osa3 {
+    background-color: #ffffff;
+    border-left-color: #741c36;
+}
+
+/* Tehtud tööd */
+
+#osa4 {
+    background-color: #eeeeee;
+    border-left-color: #111111;
+}
+
+#github {
+    background-color: #ffffff;
+    border-left-color: #741c36;
+}
+
+/* Kasulikud lingid */
+
+#osa5 {
+    background-color: #eeeeee;
+    border-left-color: #741c36;
+}
+
+.kasulikud-lingid {
+    padding-left: 25px;
+}
+
+.kasulikud-lingid li {
+    margin: 10px 0;
+}
+
+/* Lingid */
+
+a {
+    color: #741c36;
+}
+
+a:hover {
+    color: #a72a4f;
+}
+
+/* Git-käskude plokk */
+
+pre {
+    overflow-x: auto;
+    padding: 18px;
+    color: white;
+    background-color: #111111;
+    border-left: 6px solid #741c36;
+    border-radius: 8px;
+}
+
+/* Meedia lehe ruudustik */
+
+#suurkast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#suurkast section {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+#pildigalerii {
+    border-left-color: #741c36;
+}
+
+#video {
+    border-left-color: #111111;
+}
+
+#kaart {
+    border-left-color: #741c36;
+}
+
+#muusika {
+    border-left-color: #111111;
+}
+
+/* Pildigalerii */
+
+.galerii {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.galerii img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    margin: auto;
+    object-fit: cover;
+    border: 3px solid #741c36;
+    border-radius: 8px;
+    filter: grayscale(25%);
+    transition: 0.3s;
+}
+
+.galerii img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+    box-shadow: 0 5px 12px rgb(0 0 0 / 35%);
+}
+
+/* Video ja kaart */
+
+#video iframe,
+#kaart iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 3px solid #333333;
+    border-radius: 8px;
+    background-color: #111111;
+}
+
+/* Muusika */
+
+#muusika h3 {
+    margin: 18px 0 8px;
+    color: #741c36;
+    font-size: 17px;
+}
+
+#muusika iframe {
+    display: block;
+    width: 100%;
+    height: 152px;
+    margin-bottom: 18px;
+    border: 3px solid #333333;
+    border-radius: 8px;
+    background-color: #111111;
+}
+
+/* Jalus */
+
+footer {
+    margin-top: 35px;
+    padding: 25px;
+    color: white;
+    text-align: center;
+    background-color: #111111;
+    border-top: 5px solid #741c36;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #d97794;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Kujundus väiksematele ekraanidele */
+
+@media (max-width: 800px) {
+    #suurkast {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        border-right: 0;
+        border-bottom: 1px solid #444444;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .galerii {
+        grid-template-columns: 1fr;
+    }
+}
