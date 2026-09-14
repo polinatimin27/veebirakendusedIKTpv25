@@ -33,3 +33,9 @@ table#roheline td {
     border: 1px solid green;
     text-align: center;
 }
+/*pseudoelementide kasutamine*/
+/*1 rida 1 lahter*/
+#simine tr:nth-child(1) {
+    background-color: red;
+
+}
