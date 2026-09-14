@@ -1,0 +1,79 @@
+/* Eesti lipp */
+#eesti {
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /* border-collapse: collapse; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+#eesti tr:nth-child(1) {
+    background-color: blue;
+}
+
+#eesti tr:nth-child(2) {
+    background-color: black;
+}
+
+#eesti tr:nth-child(3) {
+    background-color: white;
+}
+
+
+/* Rootsi lipp */
+
+#rootsi {
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    margin-top: 30px;
+}
+
+#rootsi tr:nth-child(1),
+#rootsi tr:nth-child(3) {
+    height: 80px;
+}
+
+#rootsi tr:nth-child(2) {
+    background-color: gold;
+    height: 50px;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(1),
+#rootsi tr:nth-child(3) td:nth-child(1) {
+    background-color: blue;
+    width: 100px;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(2),
+#rootsi tr:nth-child(3) td:nth-child(2) {
+    background-color: gold;
+    width: 40px;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(3),
+#rootsi tr:nth-child(3) td:nth-child(3) {
+    background-color: blue;
+    width: 190px;
+}
+/* Šveitsi lipp */
+#sveits {
+    width: 250px;
+    height: 250px;
+    border-spacing: 0;
+    table-layout: fixed;
+    margin-top: 30px;
+    background-color: red;
+}
+
+#sveits td {
+    background-color: red;
+}
+
+#sveits td.valge {
+    background-color: white;
+}

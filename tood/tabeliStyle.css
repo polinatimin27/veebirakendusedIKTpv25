@@ -33,9 +33,92 @@ table#roheline td {
     border: 1px solid green;
     text-align: center;
 }
-/*pseudoelementide kasutamine*/
-/*1 rida 1 lahter*/
-#simine tr:nth-child(1) {
-    background-color: red;
 
+
+/* Esimese tabeli värvid */
+
+#sinine tr:nth-child(1) td:nth-child(1) {
+    background-color: red;
+}
+
+#sinine tr:nth-child(1) td:nth-child(2) {
+    background-color: yellow;
+}
+
+#sinine tr:nth-child(2) {
+    background-color: grey;
+}
+
+
+/* Neljas tabel */
+
+table#must {
+    border: 1px solid black;
+    width: 50%;
+    height: 300px;
+    border-collapse: collapse;
+}
+
+table#must td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+/* Neljanda tabeli värvid */
+
+#must tr:nth-child(1) td:nth-child(1) {
+    background-color: #800020;
+    color: white;
+}
+
+#must tr:nth-child(1) td:nth-child(2) {
+    background-color: black;
+    color: white;
+}
+
+#must tr:nth-child(2) td:nth-child(1) {
+    background-color: #333333;
+    color: white;
+}
+
+#must tr:nth-child(2) td:nth-child(2) {
+    background-color: grey;
+    color: white;
+}
+
+#must tr:nth-child(3) td:nth-child(1) {
+    background-color: darkblue;
+    color: white;
+}
+
+#must tr:nth-child(3) td:nth-child(2) {
+    background-color: olive;
+    color: white;
+}
+
+#must tr:nth-child(4) td:nth-child(1) {
+    background-color: brown;
+    color: white;
+}
+
+#must tr:nth-child(4) td:nth-child(2) {
+    background-color: ivory;
+    color: black;
+}
+
+#must tr:nth-child(4) td:nth-child(3) {
+    background-color: purple;
+    color: white;
+}
+table#iseseisev {
+    border: 1px solid black;
+    width: 500px;
+    height: 400px;
+    border-collapse: collapse;
+}
+
+table#iseseisev td {
+    border: 1px solid black;
+    text-align: center;
 }
