@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area kasutamine</title>
+    <link rel="stylesheet" href="mapStyle.css">
+</head>
+
+<body>
+
+<h1>Lehel on kasutatud map area käsud</h1>
+<h2>Palun kliki hiirega erineva alale pildil</h2>
+
+<img src="map.png" alt="tähed" usemap="#tahedkaart">
+
+<!-- kasutame map'i (kaart) -->
+<map name="tahedkaart">
+
+    <!-- ring - circle coords=x, y, R -->
+    <area shape="circle"
+          coords="185,100,45"
+          href="taht1.html"
+          alt="suur täht">
+
+    <!-- ristkülik rect coords=x, y, x1, y2 -->
+    <area shape="rect"
+          coords="55,180,110,240"
+          href="taht2.html"
+          alt="täht">
+
+    <!-- mitu nurga polügoon - poly coords=x,y, x1,y1, x2,y2-kolmnurk -->
+    <area shape="poly"
+          coords="65,45,80,75,50,75"
+          href="taht3.html"
+          alt="väike täht">
+
+    <area shape="poly"
+          coords="65,45,80,75,50,75"
+          href="taht3.html"
+          alt="väike täht">
+
+    <!-- kuu -->
+    <area shape="circle"
+          coords="55,110,35"
+          href="kuu.html"
+          alt="kuu">
+
+    <!-- süda -->
+    <area shape="circle"
+          coords="200,225,25"
+          href="suda.html"
+          alt="süda">
+
+    <!-- välk -->
+    <area shape="poly"
+          coords="245,175,265,195,255,200,275,230,245,205,255,200,235,185"
+          href="valk.html"
+          alt="välk">
+
+</map>
+
+</body>
+</html>
