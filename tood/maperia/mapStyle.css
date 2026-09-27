@@ -6,7 +6,39 @@ div#selgitus {
     left: 350px;
     padding: 5px;
 }
+
 img {
     border: 3px solid lightgray;
-    border-radius: 60%;
+}
+
+.objektiPilt {
+    width: 150px;
+    height: auto;
+    border: none;
+}
+
+#selgitus a {
+    color: black;
+}
+div#selgitus {
+    background-color: lightgray;
+    width: 260px;
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    padding: 10px;
+}
+
+img {
+    border: 3px solid lightgray;
+}
+
+.objektiPilt {
+    width: 250px;
+    height: auto;
+    border: none;
+}
+
+#selgitus p {
+    line-height: 1.3;
 }
