@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ededed;
+    color: #262626;
+    margin: 30px;
+}
+
+h1 {
+    color: #652437;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #aaaaaa;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #652437;
+    color: white;
+}
+
+td:first-child {
+    width: 45%;
+}
+
+textarea,
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.stiilid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+}
+
+.stiilid label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* Ümmargused checkbox-valikud. */
+input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    border: 1px solid #777777;
+    border-radius: 50%;
+    background-color: white;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #652437;
+    border-color: #652437;
+    box-shadow: inset 0 0 0 3px white;
+}
+
+input[type="checkbox"]:focus-visible {
+    outline: 2px solid #652437;
+    outline-offset: 3px;
+}
+
+input[type="radio"],
+input[type="range"] {
+    accent-color: #652437;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 15px 0 0;
+}
+
+.skaala {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.vastus {
+    margin-top: 10px;
+    color: #652437;
+    overflow-wrap: anywhere;
+}
+
+.nupud {
+    margin-top: 15px;
+}
+
+input[type="button"] {
+    background-color: #652437;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #3c1823;
+}
+
+#kokkuvote {
+    box-sizing: border-box;
+    max-width: 900px;
+    margin-top: 20px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+#kokkuvote:not(:empty) {
+    background-color: #e4dadd;
+    border: 1px solid #652437;
+    padding: 15px;
+}
+
+a {
+    color: #652437;
+}

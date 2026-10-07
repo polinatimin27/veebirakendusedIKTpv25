@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Polina Timin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muusika küsimustik</title>
+    <link rel="stylesheet" href="vormid/muusikaStyle.css">
+    <script src="js/muusikaScript.js" defer></script>
+</head>
+<body>
+
+<h1>Muusika küsimustik</h1>
+<p>Vasta küsimustele oma muusikaeelistuste kohta.</p>
+
+<form id="kusimustik">
+    <table>
+        <tr>
+            <th>Küsimused</th>
+            <th>Vastused</th>
+        </tr>
+
+        <tr>
+            <td>1. Milline muusika sulle meeldib?</td>
+            <td>
+                <div class="stiilid">
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Pop" onchange="loeZanrid()">
+                        Pop
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Rock" onchange="loeZanrid()">
+                        Rock
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Metal" onchange="loeZanrid()">
+                        Metal
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Elektrooniline muusika"
+                               onchange="loeZanrid()">
+                        Elektrooniline muusika
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Räpp" onchange="loeZanrid()">
+                        Räpp
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Indie" onchange="loeZanrid()">
+                        Indie
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Hip-hop" onchange="loeZanrid()">
+                        Hip-hop
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Jazz" onchange="loeZanrid()">
+                        Jazz
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Klassikaline muusika"
+                               onchange="loeZanrid()">
+                        Klassikaline muusika
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="zanr"
+                               value="Folk" onchange="loeZanrid()">
+                        Folk
+                    </label>
+                </div>
+
+                <div id="vastus1" class="vastus"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="lemmikud">
+                    2. Nimeta oma lemmikbändid või -laulud.
+                </label>
+            </td>
+            <td>
+                <textarea id="lemmikud" name="lemmikud"
+                          rows="3" cols="30"
+                          oninput="loeLemmikud()"></textarea>
+
+                <div id="vastus2" class="vastus"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="kuulamine">
+                    3. Kui tihti või millistes olukordades
+                    sa muusikat kuulad?
+                </label>
+            </td>
+            <td>
+                <textarea id="kuulamine" name="kuulamine"
+                          rows="3" cols="30"
+                          oninput="loeKuulamine()"></textarea>
+
+                <div id="vastus3" class="vastus"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4. Kas sa oled kunagi kontserdil käinud?</td>
+            <td>
+                <input type="radio" name="kontsert" id="jah"
+                       value="Jah" onchange="loeKontsert()">
+                <label for="jah">Jah</label>
+
+                <input type="radio" name="kontsert" id="ei"
+                       value="Ei" onchange="loeKontsert()">
+                <label for="ei">Ei</label>
+
+                <div id="vastus4" class="vastus"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="instrument">
+                    5. Millist muusikainstrumenti tahaksid
+                    õppida mängima?
+                </label>
+            </td>
+            <td>
+                <select id="instrument" name="instrument"
+                        onchange="loeInstrument()">
+                    <option value="">Vali...</option>
+                    <option value="Kitarr">Kitarr</option>
+                    <option value="Klaver">Klaver</option>
+                    <option value="Trummid">Trummid</option>
+                    <option value="Viiul">Viiul</option>
+                    <option value="Muu instrument">Muu instrument</option>
+                    <option value="Ei soovi õppida">Ei soovi õppida</option>
+                </select>
+
+                <div id="vastus5" class="vastus"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="tahtsus">
+                    6. Kui tähtis on muusika sinu elus?
+                </label>
+            </td>
+            <td>
+                <div class="skaala">
+                    <span>0 — pole tähtis</span>
+                    <span>10 — väga tähtis</span>
+                </div>
+
+                <input type="range" id="tahtsus" name="tahtsus"
+                       min="0" max="10" step="1" value="5"
+                       oninput="loeTahtsus()">
+
+                <div id="vastus6" class="vastus">
+                    Muusika tähtsus: 5 / 10
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="nupud">
+        <input type="button" value="Saada" onclick="naitaKokkuvote()">
+        <input type="button" value="Puhasta" onclick="puhastaVorm()">
+    </div>
+</form>
+
+<div id="kokkuvote"></div>
+
+<p><a href="../tehtud.html">Tehtud tööd</a></p>
+
+</body>
+</html>бббб
