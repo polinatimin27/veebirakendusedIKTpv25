@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Polina Timin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saia kalkulaator</title>
+
+    <script src="../js/kalc.js" defer></script>
+</head>
+
+<body>
+
+<h1>Saia kalkulaator</h1>
+
+<label for="saiatyyp">Palun vali saia tüüp:</label>
+
+<select name="saiatyyp" id="saiatyyp" onchange="saiaKalk()">
+    <option value="vali">Vali...</option>
+    <option value="mooni">Moonisai</option>
+    <option value="juustu">Juustusai</option>
+    <option value="pontsik">Pontšik</option>
+    <option value="kaneeli">Kaneelisai</option>
+</select>
+
+<br><br>
+
+<label for="kogus">Kogus:</label>
+
+<input type="number"
+       name="kogus"
+       id="kogus"
+       min="1"
+       step="1"
+       value="1"
+       oninput="saiaKalk()">
+
+<br><br>
+
+<div id="vastus"></div>
+
+<br>
+
+<img id="pilt" alt="" width="250" hidden>
+
+</body>
+</html>
