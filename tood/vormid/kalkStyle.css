@@ -1,0 +1,61 @@
+
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+section#osa1 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 170px;
+}
+
+section#osa2 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 200px;
+    margin-top: 0;
+}
+
+img#pilt {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+select option {
+    background-color: red;
+    color: blue;
+}
+
+select {
+    border-radius: 15px;
+    text-align: right;
+}
+
+input[type=number] {
+    border-radius: 15px;
+    padding: 10px;
+    text-align: right;
+    width: 50px;
+}
+
+label {
+    font-weight: bold;
+}
+
+label:hover {
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 1pt solid black;
+    padding: 2px;
+}
+
+#vastus {
+    color: blue;
+}

@@ -1,49 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="et">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Polina Timin">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Saia kalkulaator</title>
-
-    <script src="../js/kalc.js" defer></script>
+    <title>Kalkulaatorid</title>
+    <script src="../js/kalc.js"></script>
+    <script src="../js/tempTeisendus.js"></script>
+    <link rel="stylesheet" href="kalkStyle.css">
 </head>
-
 <body>
 
-<h1>Saia kalkulaator</h1>
+<h1>Kalkulaatorid</h1>
 
-<label for="saiatyyp">Palun vali saia tüüp:</label>
+<section id="osa1">
+    <h2>Saia kalkulaator</h2>
 
-<select name="saiatyyp" id="saiatyyp" onchange="saiaKalk()">
-    <option value="vali">Vali...</option>
-    <option value="mooni">Moonisai</option>
-    <option value="juustu">Juustusai</option>
-    <option value="pontsik">Pontšik</option>
-    <option value="kaneeli">Kaneelisai</option>
-</select>
+    <label for="kogus">Kogus:</label>
+    <input type="number" id="kogus" min="1" max="10"
+           step="1" value="2" onchange="saiaKalk()">
+    <br>
 
-<br><br>
+    <label for="saiatyyp">Palun vali saia tüüp</label>
+    <select name="saiatyyp" id="saiatyyp" onchange="saiaKalk()">
+        <option value="vali">Vali...</option>
+        <option value="mooni">Moonisai</option>
+        <option value="juustu">Juustusai</option>
+        <option value="pontsik">Pontšik</option>
+        <option value="kaneeli">Kaneelisai</option>
+    </select>
 
-<label for="kogus">Kogus:</label>
+    <br><br>
 
-<input type="number"
-       name="kogus"
-       id="kogus"
-       min="1"
-       step="1"
-       value="1"
-       oninput="saiaKalk()">
+    <img id="pilt" alt="Sai" hidden>
+    <p id="vastus"></p>
+</section>
 
-<br><br>
+<section id="osa2">
+    <h2>Temperatuuri kalkulaator</h2>
 
-<div id="vastus"></div>
+    <label for="temp">Sisesta temperatuur</label>
+    <input type="number" id="temp" min="-50" max="50"
+           step="1" value="0" onchange="tempTeisendus()">
+    <br>
 
-<br>
+    <input type="radio" name="tempValik" id="celsius"
+           value="celsius" onchange="tempTeisendus()">
+    <label for="celsius">C - Celsius</label>
+    <br>
 
-<img id="pilt" alt="" width="250" hidden>
+    <input type="radio" name="tempValik" id="fahrenheit"
+           value="fahrenheit" onchange="tempTeisendus()">
+    <label for="fahrenheit">F - Fahrenheit</label>
+    <br>
+
+    <div id="vastus2"></div>
+
+    <br>
+    <img src="images.png" alt="Ilmaennustus" width="180">
+</section>
 
 </body>
 </html>

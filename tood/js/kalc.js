@@ -1,3 +1,4 @@
+
 function saiaKalk() {
     let vastus = document.getElementById("vastus");
     let saiatyyp = document.getElementById("saiatyyp");
@@ -16,12 +17,11 @@ function saiaKalk() {
     }
 
     if (saiatyyp.selectedIndex === 1) {
-        // toFixed(2) - ümardab 2 kohta peale komat
         vastus.innerHTML =
             "Sa valisid " + saiatyyp.value + "<br>" +
-            "Valitud kogus on " + kogus.value + "tk" + "<br>" +
+            "Valitud kogus on " + kogus.value + "tk<br>" +
             "Kokku hind on " + (mooni * kogus.value).toFixed(2) + "€";
-        vastus.style.color = "black";
+        vastus.style.color = "blue";
         pilt.src = "moonisai.jpg";
         pilt.hidden = false;
     }
@@ -29,9 +29,9 @@ function saiaKalk() {
     if (saiatyyp.selectedIndex === 2) {
         vastus.innerHTML =
             "Sa valisid " + saiatyyp.value + "<br>" +
-            "Valitud kogus on " + kogus.value + "tk" + "<br>" +
+            "Valitud kogus on " + kogus.value + "tk<br>" +
             "Kokku hind on " + (juustu * kogus.value).toFixed(2) + "€";
-        vastus.style.color = "black";
+        vastus.style.color = "blue";
         pilt.src = "juustusai.jpg";
         pilt.hidden = false;
     }
@@ -39,9 +39,9 @@ function saiaKalk() {
     if (saiatyyp.selectedIndex === 3) {
         vastus.innerHTML =
             "Sa valisid " + saiatyyp.value + "<br>" +
-            "Valitud kogus on " + kogus.value + "tk" + "<br>" +
+            "Valitud kogus on " + kogus.value + "tk<br>" +
             "Kokku hind on " + (pontsik * kogus.value).toFixed(2) + "€";
-        vastus.style.color = "black";
+        vastus.style.color = "blue";
         pilt.src = "pontsik.jpg";
         pilt.hidden = false;
     }
@@ -49,9 +49,9 @@ function saiaKalk() {
     if (saiatyyp.selectedIndex === 4) {
         vastus.innerHTML =
             "Sa valisid " + saiatyyp.value + "<br>" +
-            "Valitud kogus on " + kogus.value + "tk" + "<br>" +
+            "Valitud kogus on " + kogus.value + "tk<br>" +
             "Kokku hind on " + (kaneeli * kogus.value).toFixed(2) + "€";
-        vastus.style.color = "black";
+        vastus.style.color = "blue";
         pilt.src = "kaneelisai.jpg";
         pilt.hidden = false;
     }
