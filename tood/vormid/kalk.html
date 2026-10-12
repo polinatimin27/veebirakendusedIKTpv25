@@ -6,6 +6,8 @@
     <title>Kalkulaatorid</title>
     <script src="../js/kalc.js"></script>
     <script src="../js/tempTeisendus.js"></script>
+    <script src="../js/valuuta.js"></script>
+    <script src="../js/protsendiKalk.js"></script>
     <link rel="stylesheet" href="kalkStyle.css">
 </head>
 <body>
@@ -30,7 +32,6 @@
     </select>
 
     <br><br>
-
     <img id="pilt" alt="Sai" hidden>
     <p id="vastus"></p>
 </section>
@@ -57,6 +58,47 @@
 
     <br>
     <img src="images.png" alt="Ilmaennustus" width="180">
+</section>
+
+<section id="osa3">
+    <h2>Valuuta kalkulaator</h2>
+
+    <label for="euro">Sisesta eurod</label>
+    <input type="number" id="euro" min="0" step="0.01"
+           value="1" onchange="valuuta()">
+    <br>
+
+    <label for="valuuta">Vali valuuta</label>
+    <select id="valuuta" onchange="valuuta()">
+        <option value="dollar">Dollar</option>
+        <option value="juann">Jüaan</option>
+    </select>
+
+    <p id="vastus3"></p>
+</section>
+
+<section id="osa4">
+    <h2>Protsendikalkulaator</h2>
+
+    <label for="arv">Sisesta arv</label>
+    <input type="number" id="arv" value="100"
+           onchange="protsendiKalk()">
+    <br>
+
+    <label for="protsent">Sisesta protsent</label>
+    <input type="number" id="protsent" value="20"
+           onchange="protsendiKalk()">
+    <br>
+
+    <label for="tehe">Vali tehe</label>
+    <select id="tehe" onchange="protsendiKalk()">
+        <option value="vali">Vali...</option>
+        <option value="leia">Leia protsent arvust</option>
+        <option value="lisa">Lisa protsent</option>
+        <option value="vahenda">Vähenda protsent</option>
+    </select>
+
+    <p id="vastus4"></p>
 </section>
 
 </body>

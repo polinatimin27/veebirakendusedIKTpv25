@@ -2,6 +2,7 @@
 body {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: flex-start;
 }
@@ -11,6 +12,7 @@ section#osa1 {
     border-radius: 10pt;
     padding: 10pt;
     width: 170px;
+    flex-shrink: 0;
 }
 
 section#osa2 {
@@ -18,7 +20,23 @@ section#osa2 {
     border-radius: 10pt;
     padding: 10pt;
     width: 200px;
-    margin-top: 0;
+    flex-shrink: 0;
+}
+
+section#osa3 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+section#osa4 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 200px;
+    flex-shrink: 0;
 }
 
 img#pilt {
