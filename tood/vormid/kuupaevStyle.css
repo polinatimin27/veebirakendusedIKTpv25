@@ -1,0 +1,36 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee9eb;
+}
+
+h1 {
+    color: #5c2035;
+}
+
+a {
+    color: #5c2035;
+}
+
+section#kuupaev {
+    border: 1pt solid black;
+    padding: 15pt;
+    width: 40%;
+    background-color: #d8c2cb;
+}
+
+button {
+    padding: 8pt 14pt;
+    background-color: #5c2035;
+    color: white;
+    border: 1pt solid black;
+}
+
+button:hover {
+    background-color: #78354c;
+}
+
+#vastus {
+    margin-top: 10pt;
+    font-weight: bold;
+}
