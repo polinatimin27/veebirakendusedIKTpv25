@@ -1,4 +1,3 @@
-
 let raamat = {
     pealkiri: "Nullpunkt",
     autor: "Margus Karu",
