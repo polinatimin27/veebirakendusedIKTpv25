@@ -1,3 +1,4 @@
+
 let raamat = {
     pealkiri: "Nullpunkt",
     autor: "Margus Karu",
@@ -68,12 +69,21 @@ function alusta() {
     console.log("NÄIDE 2 - MEETOD JA THIS");
     console.log(raamat.kirjeldus());
 
+    kuva("RAAMATU OBJEKT");
+    kuva("Kirjeldus: " + raamat.kirjeldus());
+
     console.log("NÄIDE 3 - AASTA MUUTMINE");
     raamat.muudaAasta(2011);
     console.log(raamat.aasta);
 
+    kuva("Muudetud aasta: " + raamat.kirjeldus());
+
     console.log("NÄIDE 4 - OBJEKTIDE MASSIIV");
     console.log(raamatukogu.raamatud.map(r => r.pealkiri));
+
+    kuva("RAAMATUKOGU");
+    kuva("Raamatud alguses:");
+    raamatukogu.kuvaRaamatud();
 
     console.log("NÄIDE 5 - PUSH");
     raamatukogu.lisaRaamat({
@@ -83,22 +93,18 @@ function alusta() {
     });
     console.log(raamatukogu.raamatuteArv());
 
-    console.log("NÄIDE 6 - PEALE 2000");
-    console.log(raamatukogu.peale2000());
-
-    console.log("NÄIDE 7 - MINU MEETOD");
-    console.log(raamatukogu.raamatud.map(r => r.pealkiri));
-
-    kuva("RAAMATU OBJEKT");
-    kuva("Kirjeldus: Nullpunkt - Margus Karu (2010)");
-    kuva("Muudetud aasta: " + raamat.kirjeldus());
-
-    kuva("RAAMATUKOGU");
     kuva("Raamatud pärast lisamist:");
     raamatukogu.kuvaRaamatud();
 
     kuva("Raamatuid kokku: " + raamatukogu.raamatuteArv());
+
+    console.log("NÄIDE 6 - PEALE 2000");
+    console.log(raamatukogu.peale2000());
+
     kuva("Pärast 2000. aastat ilmunud raamatuid: " + raamatukogu.peale2000());
+
+    console.log("NÄIDE 7 - MINU MEETOD");
+    console.log(raamatukogu.raamatud.map(r => r.pealkiri));
 
     kuva("Minu meetod - raamatute pealkirjad:");
     raamatukogu.kuvaPealkirjad();
