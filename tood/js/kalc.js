@@ -1,4 +1,3 @@
-
 function saiaKalk() {
     let vastus = document.getElementById("vastus");
     let saiatyyp = document.getElementById("saiatyyp");
