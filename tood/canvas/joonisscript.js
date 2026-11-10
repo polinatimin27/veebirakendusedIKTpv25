@@ -1,12 +1,10 @@
 //sirge joon
 function sirgeJoon() {
-    //määrame tahvli
     const tahvel = document.getElementById("tahvel");
 
     if (tahvel.getContext) {
         let t = tahvel.getContext("2d");
 
-//joon
         t.beginPath();
         t.strokeStyle = "red";
         t.lineWidth = 2;
@@ -15,7 +13,7 @@ function sirgeJoon() {
         t.stroke();
     }
 }
-
+//puhasta
 function puhasta() {
     const tahvel = document.getElementById("tahvel");
 
@@ -30,7 +28,6 @@ function kolmnurk() {
 
     if (tahvel.getContext) {
         let t = tahvel.getContext("2d");
-//kolmnurk
         t.beginPath();
         t.strokeStyle = "red";
         t.fillStyle = "green"; //taust
@@ -46,10 +43,8 @@ function kolmnurk() {
 //ristkülik
 function ristkylik() {
     const tahvel = document.getElementById("tahvel");
-
     if (tahvel.getContext) {
         let t = tahvel.getContext("2d");
-
         let laius = Number(document.getElementById("laius").value);
         let korgus = Number(document.getElementById("korgus").value);
         t.clearRect(0, 0, 300, 400);
@@ -61,7 +56,7 @@ function ristkylik() {
 function ring() {
     const tahvel = document.getElementById("tahvel");
     const r = document.getElementById("radius");
-if (tahvel.getContext) {
+    if (tahvel.getContext) {
         let t = tahvel.getContext("2d");
         t.fillStyle = "green";
         t.beginPath();
@@ -102,38 +97,25 @@ function vasakSilm() {
         t.fill();
     }
 }
-//nina
-function nina () {
-    const tahvel = document.getElementById("tahvel");
 
+//vasak kõrv
+function vasakKorv() {
+    const tahvel = document.getElementById("tahvel");
     if (tahvel.getContext) {
         let t = tahvel.getContext("2d");
-
-        let laius = Number(document.getElementById("laius").value);
-        let korgus = Number(document.getElementById("korgus").value);
-        t.clearRect(0, 0, 300, 400);
-        t.fillStyle = "olive";
-        t.fillRect(100, 50, laius, korgus);
+        t.fillStyle = "orange";
+        t.fillRect(45, 150, 20, 45);
     }
 }
-//vasak kõrv
-        function vasakKorv() {
-            const tahvel = document.getElementById("tahvel");
-            if (tahvel.getContext) {
-                let t = tahvel.getContext("2d");
-                t.fillStyle = "orange";
-                t.fillRect(45, 150, 20, 45);
-        }
- }
 //parem kõrv
-        function paremKorv() {
-            const tahvel = document.getElementById("tahvel");
-            if (tahvel.getContext) {
-                let t = tahvel.getContext("2d");
-                t.fillStyle = "orange";
-                t.fillRect(235, 150, 20, 45);
-       }
- }
+function paremKorv() {
+    const tahvel = document.getElementById("tahvel");
+    if (tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        t.fillStyle = "orange";
+        t.fillRect(235, 150, 20, 45);
+    }
+}
 //nina
 function nina() {
     const tahvel = document.getElementById("tahvel");
@@ -141,5 +123,33 @@ function nina() {
         let t = tahvel.getContext("2d");
         t.fillStyle = "orange";
         t.fillRect(145, 170, 10, 25);
+    }
+}
+//suu
+function suu() {
+    const tahvel = document.getElementById("tahvel");
+    if (tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        t.beginPath();
+        t.strokeStyle = "black";
+        t.lineWidth = 3;
+        t.arc(150, 210, 30, 0, Math.PI);
+        t.stroke();
+    }
+}
+//pilt
+function pilt() {
+    const tahvel = document.getElementById("tahvel");
+    if (tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        const fail = new Image();
+        fail.onload = function() {
+            t.clearRect(0, 0, 300, 400);
+            t.drawImage(fail, 50, 50, 150, 150);
+        };
+        fail.onerror = function() {
+            alert("Pilti ei leitud!");
+        };
+        fail.src = "smile.jpg";
     }
 }

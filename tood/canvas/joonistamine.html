@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
     <meta charset="UTF-8">
     <title>Joonistamisrakendus canvas-ga</title>
     <link rel="stylesheet" href="canvasStyle.css">
-    <script src="joonisScript.js"></script>
+    <script src="joonisScript.js" defer></script>
 </head>
 <body>
 <h1>Joonistamisrakendus canvas-ga</h1>
@@ -24,10 +25,9 @@
 <input type="button" value="Ring" onclick="ring()">
 <label for="radius">Raadius</label>
 <input type="number" min="1" max="150" step="10" id="radius" value="50">
-
 <br>
-
-<br>
+<input type="button" value="Pilt" onclick="pilt()">
+<br><br>
 <input type="button" value="Pea" onclick="pea()">
 <br>
 <input type="button" value="1 silm" onclick="vasakSilm()">
@@ -38,8 +38,7 @@
 <br>
 <input type="button" value="Nina" onclick="nina()">
 <br>
-<input type="button" value="Suu " onclick="suu()">
-
+<input type="button" value="Suu" onclick="suu()">
 
 </body>
 </html>
